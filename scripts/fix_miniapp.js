@@ -18,3 +18,6 @@ fs.writeFileSync(`../pkg_miniapp/${appName}.fix.js`, content);
 
 fs.unlinkSync(`../pkg_miniapp/${appName}.js`)
 fs.renameSync(`../pkg_miniapp/${appName}.fix.js`,`../pkg_miniapp/${appName}.js`)
+
+// 拷贝encoding适配文件
+fs.cpSync(`encoding.js`,`../pkg_miniapp/encoding.js`)

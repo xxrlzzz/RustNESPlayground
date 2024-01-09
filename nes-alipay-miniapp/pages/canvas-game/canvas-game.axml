@@ -1,0 +1,46 @@
+<view class="page" disable-scroll='true'>
+  <view class="canvas-view">
+    <canvas 
+      id="canvas"
+      width="610"
+      height="610"
+      class="canvas"
+      type="webgl"
+      onTouchStart="handleInput"
+      onTouchMove="handleInput"
+      onTouchEnd="handleInput"
+      onReady="onCanvasReady"
+    >
+    </canvas>
+  </view>
+  <view style="height:1000px" disable-scroll='true'>
+    
+  </view>
+  <view class="virtual-gamepad" style="display: block;">
+    <!--<view class="top">
+       <view class="buttons b_l"></view>
+       <view class="buttons b_r"></view>
+    </view> -->
+    <view class="left">
+       <view class="buttons b_up" id="b_up" onTouchStart="handleInput" onTouchEnd="handleInput"></view>
+       <view class="buttons b_up_left" id="b_up_left"  onTouchStart="handleInput" onTouchEnd="handleInput"></view>
+       <view class="buttons b_up_right" id="b_up_right"  onTouchStart="handleInput" onTouchEnd="handleInput"></view>
+       <view class="buttons b_down" id="b_down" onTouchStart="handleInput" onTouchEnd="handleInput"></view>
+       <view class="buttons b_down_left" id="b_down_left" onTouchStart="handleInput" onTouchEnd="handleInput"></view>
+       <view class="buttons b_down_right" id="b_down_right" onTouchStart="handleInput" onTouchEnd="handleInput"></view>
+       <view class="buttons b_left" id="b_left" onTouchStart="handleInput" onTouchEnd="handleInput"></view>
+       <view class="buttons b_right" id="b_right" onTouchStart="handleInput" onTouchEnd="handleInput"></view>
+    </view>
+    <view class="center">
+       <view class="buttons b_select" id="b_select" onTouchStart="handleInput" onTouchEnd="handleInput"></view>
+       <view class="buttons b_start" id="b_start" onTouchStart="handleInput" onTouchEnd="handleInput"></view>
+    </view>
+    <view class="right">
+      <view class="buttons b_a" id="b_a" onTouchStart="handleInput" onTouchEnd="handleInput">A</view>
+      <view class="buttons b_b" id="b_b" onTouchStart="handleInput" onTouchEnd="handleInput">B</view>
+      <!-- <view class="buttons b_x" ontouchstart="Game.touchEvent(this, event, 2);" ontouchend="Game.touchEvent(this, event, 3);" data-maplink="9">T B</view>
+      <view class="buttons b_y" ontouchstart="Game.touchEvent(this, event, 2);" ontouchend="Game.touchEvent(this, event, 3);" data-maplink="1">T A</view></view> -->
+  </view>
+</view>
+
+
